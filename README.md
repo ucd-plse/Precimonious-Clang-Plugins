@@ -1,6 +1,6 @@
 # Precimonious-Clang-Plugins
 
-### Setup
+### 1. Setup
 
 #### Required Prerequisites
 
@@ -65,7 +65,7 @@ root@<container_id>:~/home# pwd
 ```
 
 
-### Run Precimonious on NAS CG
+### 2. Run Precimonious on NAS CG
 
 Run the following commands. (approx. 1h) 
 `cg` specifies the name of the benchmark, 
@@ -76,7 +76,7 @@ cd /root/home/Precimonious
 python3 run.py cg 10
 ```
 
-### Compile and Use Clang Plugins
+### 3. Compile and Use Clang Plugins
 
 There are two Clang plugins `CreateSearchSpace.so` and 
 `TransformType.so` which can be found in 
