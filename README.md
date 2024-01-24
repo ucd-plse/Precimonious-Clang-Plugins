@@ -1,21 +1,21 @@
 # Precimonious-Clang-Plugins
 
-## 1. Setup
+### Setup
 
-### Required Prerequisites
+#### Required Prerequisites
 
-#### Hardware
+Hardware:
 
 - 40GB free disk space recommended (At lease more than 30GB to download the docker image and the github repo.)
 
-#### Software
+Software:
 
 - Ubuntu 
     - Recommended version: 20.04 with kernel version 5.14.0 (The reproduction package has not been tested on other operating systems.)
 - Docker 
     - Recommended version: 23.0.1 (The reproduction package has not been tested with other Docker versions.)
 
-### Steps to Set Up
+#### Steps to Set Up
 
 In the following steps, please replace `<YOUR LOCAL PATH TO THIS REPO>`
 to your local path of this github repository.
@@ -56,15 +56,24 @@ docker start -i precimonious
 To exit and stop the container, press Ctrl+D.
 
 
-## 2. Run Precimonious on NAS CG
+### Run Precimonious on NAS CG
 
-Run the following commands. (approx. 1h)
+Run the following commands. (approx. 1h) 
+`cg` specifies the name of the benchmark, 
+and `10` indicates the timeout in seconds to run the benchmark `cg`.
 
 ```
 cd /root/home/Precimonious
 python3 run.py cg 10
 ```
 
-## 3. Compile and Use Clang Plugins
+### Compile and Use Clang Plugins
 
+Compile clang plugins.
+
+```
+cd /root/home/Precimonious/plugin
+make PLUGIN=CreateSearchSpace
+make PLUGIN=TransformType
+```
 
