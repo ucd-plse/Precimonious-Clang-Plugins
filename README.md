@@ -55,6 +55,15 @@ docker start -i precimonious
 ```
 To exit and stop the container, press Ctrl+D.
 
+##### Check if you are in the docker container
+
+```
+root@<container_id>:~/home# ls
+Precimonious  README.md
+root@<container_id>:~/home# pwd
+/root/home
+```
+
 
 ### Run Precimonious on NAS CG
 
@@ -69,11 +78,40 @@ python3 run.py cg 10
 
 ### Compile and Use Clang Plugins
 
-Compile clang plugins.
+There are two Clang plugins `CreateSearchSpace.so` and 
+`TransformType.so` which can be found in 
+`Precimonious-Clang-Plugins/Precimonious/plugin/`.
+`CreateSearchSpace.so` is used to create the search space
+of a benchmark and `TransformType.so` is to transform a benchmark
+based on a specific precision configuration.
+
+
+#### Compile Clang Plugins
+
+The repository already has compiled clang plugins `CreateSearchSpace.so` and 
+`TransformType.so`. To compile them mannually, run the following commands.
 
 ```
 cd /root/home/Precimonious/plugin
 make PLUGIN=CreateSearchSpace
 make PLUGIN=TransformType
+```
+
+#### Use Clang Plugins on NAS CG
+
+1. Generate search space of `cg`
+
+```
+cd /root/home/Precimonious/cg/run
+python3 generate-include.py
+python3 setup.py cg
+python3 create-search-space.py cg
+```
+
+2. Apply a precision configuration on `cg`
+
+
+```
+python3 trans-type.py config_example.json cg
 ```
 
