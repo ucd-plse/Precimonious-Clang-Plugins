@@ -1,2 +1,2 @@
 clean:
-	rm *.out *config_*.json *.txt
+	rm -rf *.out *config_*.json *.txt
