@@ -112,6 +112,6 @@ python3 create-search-space.py cg
 
 
 ```
-python3 trans-type.py config_example.json cg
+python3 trans-type.py example.json cg
 ```
 
