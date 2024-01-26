@@ -75,6 +75,15 @@ and `10` indicates the timeout in seconds to run the benchmark `cg`.
 cd /root/home/Precimonious
 python3 run.py cg 10
 ```
+Expected results:
+
+After the precision tuning is done, you can find a folder in `/root/home/Precimonious/cg/run/results-eps==4-A` which contains the following files:
+
+- `*.json`: all precision configurations in the search
+- `.log`: a log file containing model prediction results for each configuration and the corresponding verification results
+- `dd2_valid_{BENCH}_{IDX}.json`: the best precision configuration found by our tool
+- `best_speedup_{BENCH}_{IDX}.txt`: the corresponding best speed up
+
 
 ### 3. Compile and Use Clang Plugins
 
