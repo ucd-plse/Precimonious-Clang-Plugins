@@ -85,7 +85,7 @@ After the precision tuning is done, you can find a folder in `/root/home/Precimo
 - `best_speedup_{BENCH}_{IDX}.txt`: the corresponding best speed up
 
 
-### 3. Compile and Use Clang Plugins
+### 3. How to Use Clang Plugins Separately
 
 There are two Clang plugins `CreateSearchSpace.so` and 
 `TransformType.so` which can be found in 
@@ -97,8 +97,8 @@ based on a specific precision configuration.
 
 #### Compile Clang Plugins
 
-The repository already has compiled clang plugins `CreateSearchSpace.so` and 
-`TransformType.so`. To compile them mannually, run the following commands.
+First, you need to compile the clang plugins. The repository contains the clang plugin codes [`CreateSearchSpace.cpp`](https://github.com/ucd-plse/Precimonious-Clang-Plugins/blob/main/Precimonious/plugin/CreateSearchSpace.cpp) and [`TransformType.cpp`](https://github.com/ucd-plse/Precimonious-Clang-Plugins/blob/main/Precimonious/plugin/TransformType.cpp).  The repository already has compiled clang plugins [`CreateSearchSpace.so`](https://github.com/ucd-plse/Precimonious-Clang-Plugins/blob/main/Precimonious/plugin/CreateSearchSpace.so) and 
+[`TransformType.so`](https://github.com/ucd-plse/Precimonious-Clang-Plugins/blob/main/Precimonious/plugin/TransformType.so). To compile them mannually, run the following commands.
 
 ```
 cd /root/home/Precimonious/plugin
