@@ -17,11 +17,11 @@ for B in benchlist:
         _start = time.time()
 
         os.system(f"cd {B}/run; \
-                    python3 generate-include.py; \
-                    python3 setup.py {B}; \
-                    rm -f *.txt; \
-                    python3 create-search-space.py {B}; \
-                    python3 ../dd2.py {B} search_config.json config.json {TIMEOUT} {epsilon} A \
+                    python3 generate-include.py; \  # to generate include.json that specifies functions and variables to be considered
+                    python3 setup.py {B}; \  # to preprocess the benchmark
+                    rm -f *.txt; \  # to remove output files from previous runs
+                    python3 create-search-space.py {B}; \  # to create the search space file called search_config.json and the initial config config.json 
+                    python3 ../dd2.py {B} search_config.json config.json {TIMEOUT} {epsilon} A \  # to run precimonious on the benchmark
                         ")
         _elapsed = (time.time() - _start)
         logging.info(f"      epsilon --> {epsilon}  time --> {str(timedelta(seconds=_elapsed))}")
