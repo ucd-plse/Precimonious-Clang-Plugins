@@ -87,8 +87,8 @@ After the precision tuning is done, you can find a folder in `/root/home/Precimo
 
 ### 3. How to Use Clang Plugins Separately
 
-There are two Clang plugins `CreateSearchSpace.so` and 
-`TransformType.so` which can be found in 
+There are two Clang plugins [`CreateSearchSpace.so`](https://github.com/ucd-plse/Precimonious-Clang-Plugins/blob/main/Precimonious/plugin/CreateSearchSpace.so) and 
+[`TransformType.so`](https://github.com/ucd-plse/Precimonious-Clang-Plugins/blob/main/Precimonious/plugin/TransformType.so) which can be found in 
 `Precimonious-Clang-Plugins/Precimonious/plugin/`.
 `CreateSearchSpace.so` is used to create the search space
 of a benchmark and `TransformType.so` is to transform a benchmark
@@ -97,8 +97,8 @@ based on a specific precision configuration.
 
 #### Compile Clang Plugins
 
-First, you need to compile the clang plugins. The repository contains the clang plugin codes [`CreateSearchSpace.cpp`](https://github.com/ucd-plse/Precimonious-Clang-Plugins/blob/main/Precimonious/plugin/CreateSearchSpace.cpp) and [`TransformType.cpp`](https://github.com/ucd-plse/Precimonious-Clang-Plugins/blob/main/Precimonious/plugin/TransformType.cpp).  The repository already has compiled clang plugins [`CreateSearchSpace.so`](https://github.com/ucd-plse/Precimonious-Clang-Plugins/blob/main/Precimonious/plugin/CreateSearchSpace.so) and 
-[`TransformType.so`](https://github.com/ucd-plse/Precimonious-Clang-Plugins/blob/main/Precimonious/plugin/TransformType.so). To compile them mannually, run the following commands.
+First, you need to compile the clang plugins. The repository contains the clang plugin codes [`CreateSearchSpace.cpp`](https://github.com/ucd-plse/Precimonious-Clang-Plugins/blob/main/Precimonious/plugin/CreateSearchSpace.cpp) and [`TransformType.cpp`](https://github.com/ucd-plse/Precimonious-Clang-Plugins/blob/main/Precimonious/plugin/TransformType.cpp).  The repository already has compiled clang plugins `CreateSearchSpace.so` and 
+`TransformType.so`. To compile them mannually, run the following commands.
 
 ```
 cd /root/home/Precimonious/plugin
